@@ -1,3 +1,6 @@
+
+// PRIMERO EJERCICIO //
+
 function par(x) {
     if (x % 2 === 0) {
         return "Par";
@@ -9,6 +12,9 @@ function par(x) {
 respuesta = par(23);
 console.log(respuesta);
 
+
+
+// SEGUNDO EJERCICIO //
 
 function mayor(a, b) {
     if (a >= b) {
@@ -22,6 +28,9 @@ function mayor(a, b) {
 respuesta = mayor(2, 4);
 console.log(respuesta);
 
+
+
+// TERCERO EJERCICIO //
 
 function datos(x) {
     if (x % 2 === 0) {
@@ -48,6 +57,8 @@ datos(5);
 
 
 
+// CUARTO EJERCICIO //
+
 function SumaValores() {
 
     const arr = [1, 3, 9, 2, 3];
@@ -64,6 +75,8 @@ SumaValores();
 
 
 
+// QUINTO EJERCICIO //
+
 function factorial(x) {
     if (x == 0) {
         return 1;
@@ -77,7 +90,7 @@ console.log(fact);
 
 
 
-
+// SEXTO EJERCICIO //
 
 function primo(numero) {
     if (numero == 0 || numero == 1 || numero == 4) return numero + " NO ES PRIMO";
@@ -93,13 +106,15 @@ console.log(prim);
 
 
 
+// SEPTIMO EJERCICIO //
+
 function fibonacci(x) {
     var limit = 10;
     var fibo = [0, 1];
 
     for (i = 2; i <= limit; i++) {
         fibo.push(fibo[i - 1] + fibo[i - 2]);
-        console.log(fibo[i] );	
+        console.log(fibo[i]);
 
     }
 }
@@ -108,35 +123,49 @@ fibonacci(5);
 
 
 
+// OCTAVO EJERCICIO //
 
-function primoCifras(x){
-    
+function primoCifras(x) {
+
 
 
 }
 
 
 
-function capitaliza (letter) {
-   return letter.split(' ').map(prhase => prhase.split('').map((letter, index) => index === 0 ? letter.toUpperCase() : letter.toLowerCase()).join('')).join(' ').trim();
-   
+// NOVENO EJERCICIO //
+
+function capitaliza(letter) {
+    return letter.split(' ').map(prhase => prhase.split('').map((letter, index) => index === 0 ? letter.toUpperCase() : letter.toLowerCase()).join('')).join(' ').trim();
+
 }
 
 // probamos la funcion
+console.log(capitaliza('barcelona lsU'));
 
 
-console.log(capitaliza('barcelona lsU'))
+// DECIMO EJERCICIO //
+
 
 function palabra(x) {
-
-
-
-
-
-
+    const vowels = ["a", "e", "i", "o", "u"]
+    let count = 0;
+    for (let letter of str.toLowerCase()) {
+        if (vowels.includes(letter)) {
+            count++;
+        }
+    }for (i = 0; i < palabra.length(); i++); {
+        if (palabra.charAt(i) != "") {
+            numeroLetra++;
+        }
+    }
 }
+// probamos la funcion //
+console.log(palabra);
 
 
+
+// ONCEAVO EJERCICIO //
 
 function hoy() {
 
@@ -148,6 +177,8 @@ function hoy() {
 
 
 
+// DOCEAVO EJERCICIO //
+
 function navidad() {
 
 
@@ -157,6 +188,8 @@ function navidad() {
 }
 
 
+
+// TRECEAVO EJERCICIO //
 
 function analiza(array) {
 
