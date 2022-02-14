@@ -1,4 +1,3 @@
-
 // PRIMERO EJERCICIO //
 
 function par(x) {
@@ -147,55 +146,106 @@ console.log(capitaliza('barcelona lsU'));
 // DECIMO EJERCICIO //
 
 
-function palabra(x) {
-    const vowels = ["a", "e", "i", "o", "u"]
-    let count = 0;
-    for (let letter of str.toLowerCase()) {
-        if (vowels.includes(letter)) {
-            count++;
+function palabra(letra = 'Hola') {
+    
+    let letrasTotales= 0;
+    let numVocales=0;
+    let numConsonantes=0;
+    let isPar;
+   
+    for ( i = 0; i < letra.length; i++) {
+
+      
+        
+        if ( letra.charAt(i).toLocaleLowerCase() === 'a' 
+        || letra.charAt(i).toLocaleLowerCase() === 'e' 
+        || letra.charAt(i).toLocaleLowerCase() === 'i' 
+        || letra.charAt(i).toLocaleLowerCase() === 'o'
+        || letra.charAt(i).toLocaleLowerCase() ==='u') {
+            numVocales++;
+            
+        }else{
+            numConsonantes++;
         }
-    }for (i = 0; i < palabra.length(); i++); {
-        if (palabra.charAt(i) != "") {
-            numeroLetra++;
-        }
+        letrasTotales++;
     }
+    isPar =  letrasTotales % 2 === 0;
+
+    console.log(`"${letra}" tiene ${letra.length} letras.` );
+    console.log(`Vocales ${numVocales}` );
+    console.log(`Consonantes ${numConsonantes}` );
+    if(isPar) console.log('Es un número par');
+    else console.log('Es un número impar');
 }
 // probamos la funcion //
-console.log(palabra);
+palabra('Barcelona');
 
 
 
 // ONCEAVO EJERCICIO //
 
 function hoy() {
-
-
-
-
-
+    let numberOfTheDay = new Date().getDay();
+    let days = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+    let hoy = days[numberOfTheDay-1];
+console.log(`Hoy es ${hoy}`);
 }
 
-
+hoy();
 
 // DOCEAVO EJERCICIO //
 
 function navidad() {
+    let numberOfTheDay = new Date().getDate();
+    let dias;
 
-
-
+console.log(`Faltan ${dias} para navidad`);
+console.log(numberOfTheDay);
 
 
 }
 
-
+navidad();
 
 // TRECEAVO EJERCICIO //
 
 function analiza(array) {
 
-
+  
 
 
 
 }
+
+function prompExercise(){
+    
+    let number = Math.round(Math.random()*100);
+    console.log('number ',number);
+    let response = Number(prompt("Dime un número"));
+    let numeroDeVeces =0;
+
+    while(response != number){
+        response = Number(prompt("Dime un número"));
+        console.log('response ',response);
+        if(response === number) {
+            console.log('Has acertado');
+            numeroDeVeces++;
+            console.log(`Has necesitado ${numeroDeVeces} veces`);
+            break;
+        }
+        else if(response > number) {
+            console.log('Demasiado alto');
+             numeroDeVeces++;
+        }
+        else if(response < number) {
+            console.log('Demasiado bajo');
+             numeroDeVeces++;
+        }
+        else  console.log('Caracter incorrecto');
+    }
+
+    
+
+}
+prompExercise();
 
