@@ -32,6 +32,28 @@ console.log(respuesta);
 // TERCERO EJERCICIO //
 
 function datos(x) {
+    let result;
+    let isPar = (x % 2 === 0) ? 'Es par' : 'Es impar';
+    let isDiv3 = (x % 3 === 0) ? 'Es divisible entre 3' : 'No es divisible entre 3';
+    let isDiv5 = (x % 5 === 0) ? 'Es divisible entre 5' : 'No es divisible entre 5';
+    let isDiv7 = (x % 7 === 0) ? 'Es divisible entre 7' : 'No es divisible entre 7';
+    result = {
+        x,
+        isPar,
+        isDiv3,
+        isDiv5, isDiv7
+    }
+    return result;
+}
+// probamos la funcion
+respuesta = datos(5);
+console.log(`${respuesta.x} ${respuesta.isPar}`);
+console.log(`${respuesta.isDiv3}`);
+console.log(`${respuesta.isDiv5}`);
+console.log(`${respuesta.isDiv7}`);
+
+/*
+function datos(x) {
     if (x % 2 === 0) {
         console.log(x + " Es PAR");
     } else {
@@ -53,12 +75,30 @@ function datos(x) {
 }
 // probamos la funcion
 datos(5);
-
+*/
 
 
 // CUARTO EJERCICIO //
 
-function SumaValores() {
+function sumaValores(arr) {
+
+    
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+
+    return sum;
+
+}
+// probamos la funcion
+
+let resultado = sumaValores( [1, 3, 9, 2, 3 ]);
+console.log(resultado);
+
+
+/*function SumaValores() {
 
     const arr = [1, 3, 9, 2, 3];
     let sum = 0;
@@ -71,7 +111,7 @@ function SumaValores() {
 }
 // probamos la funcion
 SumaValores();
-
+*/
 
 
 // QUINTO EJERCICIO //
@@ -108,18 +148,20 @@ console.log(prim);
 // SEPTIMO EJERCICIO //
 
 function fibonacci(x) {
-    var limit = 10;
+    var limit = x;
     var fibo = [0, 1];
+    let fiboString;
 
     for (i = 2; i <= limit; i++) {
         fibo.push(fibo[i - 1] + fibo[i - 2]);
-        console.log(fibo[i]);
+        fiboString = fibo.toString();
 
     }
+    return fiboString;
 }
 // probamos la funcion
-fibonacci(5);
-
+let resultFibo = fibonacci(5);
+console.log(resultFibo);
 
 
 // OCTAVO EJERCICIO //
@@ -240,14 +282,14 @@ function analiza(array) {
     for (let i = 0; i < array.length; i++) {
         sum += array[i];
         if (let(mayor < array[i])) {
-             (" el numero mayor es " + mayor);
+            (" el numero mayor es " + mayor);
         }
         if (let(menor > array[0])) {
-             (" el numero menor es " + menor);
+            (" el numero menor es " + menor);
         }
-       
+
     }
-    return("la suma de los" + "es igual a" + sum + "El numero mayor es" + mayor + "El numero menor es" + menor);
+    return ("la suma de los" + "es igual a" + sum + "El numero mayor es" + mayor + "El numero menor es" + menor);
 }
 
 
