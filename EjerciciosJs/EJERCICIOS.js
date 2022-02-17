@@ -52,31 +52,6 @@ console.log(`${respuesta.isDiv3}`);
 console.log(`${respuesta.isDiv5}`);
 console.log(`${respuesta.isDiv7}`);
 
-/*
-function datos(x) {
-    if (x % 2 === 0) {
-        console.log(x + " Es PAR");
-    } else {
-        console.log(x + " NO ES PAR");
-    } if (x % 3 === 0) {
-        console.log(x + " ES DIVISIBLE ENTRE 3");
-    } else {
-        console.log(x + " NO ES DIVISIBLE ENTRE 3");
-    } if (x % 5 === 0) {
-        console.log(x + " ES DIVISIBLE ENTRE 5");
-    } else {
-        console.log(x + " NO ES DIVISIBLE ENTRE 5");
-    } if (x % 7 === 0) {
-        console.log(x + " ES DIVISIBLE ENTRE 7");
-    } else {
-        console.log(x + " NO ES DIVISIBLE ENTRE 7");
-    }
-
-}
-// probamos la funcion
-datos(5);
-*/
-
 
 // CUARTO EJERCICIO ////funciona
 
@@ -96,22 +71,6 @@ function sumaValores(arr) {
 
 let resultado = sumaValores([1, 3, 9, 2, 3]);
 console.log(resultado);
-
-
-/*function SumaValores() {
-
-    const arr = [1, 3, 9, 2, 3];
-    let sum = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
-
-    console.log(sum);
-}
-// probamos la funcion
-SumaValores();
-*/
 
 
 // QUINTO EJERCICIO ////funciona
@@ -266,7 +225,7 @@ console.log(fechaNavidad);
 
 // TRECEAVO EJERCICIO ////NO funciona
 
-/*function analiza(array) {
+function analiza(array) {
     let sum = 0;
     let mayor = array[3];
     let menor = array[0];
@@ -284,7 +243,7 @@ console.log(fechaNavidad);
 }
 let resultados = analiza([3,2,4,5,8,1]);
 console.log(resultados);
-*/
+
 
 
 // Ejercicio final////funciona
@@ -320,5 +279,5 @@ function prompExercise() {
 
 
 }
-//prompExercise();
+//prompExercise(); // Quitar las barras para que funcione la función final
 
