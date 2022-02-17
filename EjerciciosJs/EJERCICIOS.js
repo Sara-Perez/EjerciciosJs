@@ -119,15 +119,26 @@ function fibonacci(x) {
     return fiboString;
 }
 // probamos la funcion
-let resultFibo = fibonacci(8);
+let resultFibo = fibonacci(5);
 console.log(resultFibo);
 
 
 // OCTAVO EJERCICIO ////NO funciona
-function primoCifras(x) {
+
+/*function primoCifras(x) {
+    let contador = 0;
+    for (i = 10 ** (x - 1); i <= ((10 ** (x)) - 1); i++) {
+        for (j = 1; j <= i; j++) {
+            if (i % j === 0) {
+        (contador = contador + x + 1);
+        }else (contador = contador + x + 2);
+        break
+    }
 
 }
-
+respuesta = primoCifras(5);
+console.log(respuesta);
+*/
 
 // NOVENO EJERCICIO ////funciona
 
@@ -167,12 +178,10 @@ function palabra(letra = '') {
         letrasTotales++;
     }
     isPar = letrasTotales % 2 === 0;
+    if (isPar) ('Es un número par');
+    else return ('Es un número impar');
+    return (`"${letra}" tiene ${letra.length} letras.`), (`Vocales ${numVocales}`), (`Consonantes ${numConsonantes}`);
 
-    console.log(`"${letra}" tiene ${letra.length} letras.`);
-    console.log(`Vocales ${numVocales}`);
-    console.log(`Consonantes ${numConsonantes}`);
-    if (isPar) console.log('Es un número par');
-    else console.log('Es un número impar');
 }
 // probamos la funcion //
 palabra('Barcelona');
@@ -241,7 +250,7 @@ function analiza(array) {
     }
     return ("la suma de los " + " numeros es " + sum + " El numero mayor es " + mayor + " El numero menor es " + menor);
 }
-let resultados = analiza([3,2,4,5,8,1]);
+let resultados = analiza([3, 2, 4, 5, 8, 1]);
 console.log(resultados);
 
 
