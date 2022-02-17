@@ -1,4 +1,4 @@
-// PRIMERO EJERCICIO //
+// PRIMERO EJERCICIO // //funciona
 
 function par(x) {
     if (x % 2 === 0) {
@@ -13,7 +13,7 @@ console.log(respuesta);
 
 
 
-// SEGUNDO EJERCICIO //
+// SEGUNDO EJERCICIO ////funciona
 
 function mayor(a, b) {
     if (a >= b) {
@@ -29,7 +29,7 @@ console.log(respuesta);
 
 
 
-// TERCERO EJERCICIO //
+// TERCERO EJERCICIO ////funciona
 
 function datos(x) {
     let result;
@@ -78,11 +78,11 @@ datos(5);
 */
 
 
-// CUARTO EJERCICIO //
+// CUARTO EJERCICIO ////funciona
 
 function sumaValores(arr) {
 
-    
+
     let sum = 0;
 
     for (let i = 0; i < arr.length; i++) {
@@ -94,7 +94,7 @@ function sumaValores(arr) {
 }
 // probamos la funcion
 
-let resultado = sumaValores( [1, 3, 9, 2, 3 ]);
+let resultado = sumaValores([1, 3, 9, 2, 3]);
 console.log(resultado);
 
 
@@ -114,7 +114,7 @@ SumaValores();
 */
 
 
-// QUINTO EJERCICIO //
+// QUINTO EJERCICIO ////funciona
 
 function factorial(x) {
     if (x == 0) {
@@ -129,7 +129,7 @@ console.log(fact);
 
 
 
-// SEXTO EJERCICIO //
+// SEXTO EJERCICIO ////funciona
 
 function primo(numero) {
     if (numero == 0 || numero == 1 || numero == 4) return numero + " NO ES PRIMO";
@@ -140,12 +140,12 @@ function primo(numero) {
     return numero + " ES PRIMO";
 }
 // probamos la funcion
-const prim = primo(13);
-console.log(prim);
+
+console.log(primo(13));
 
 
 
-// SEPTIMO EJERCICIO //
+// SEPTIMO EJERCICIO ////funciona
 
 function fibonacci(x) {
     var limit = x;
@@ -160,21 +160,17 @@ function fibonacci(x) {
     return fiboString;
 }
 // probamos la funcion
-let resultFibo = fibonacci(5);
+let resultFibo = fibonacci(8);
 console.log(resultFibo);
 
 
-// OCTAVO EJERCICIO //
-
+// OCTAVO EJERCICIO ////NO funciona
 function primoCifras(x) {
-
-
 
 }
 
 
-
-// NOVENO EJERCICIO //
+// NOVENO EJERCICIO ////funciona
 
 function capitaliza(letter) {
     return letter.split(' ').map(prhase => prhase.split('').map((letter, index) => index === 0 ? letter.toUpperCase() : letter.toLowerCase()).join('')).join(' ').trim();
@@ -185,7 +181,7 @@ function capitaliza(letter) {
 console.log(capitaliza('barcelona PARIS'));
 
 
-// DECIMO EJERCICIO //
+// DECIMO EJERCICIO ////funciona
 
 
 function palabra(letra = '') {
@@ -224,76 +220,74 @@ palabra('Barcelona');
 
 
 
-// ONCEAVO EJERCICIO //
+// ONCEAVO EJERCICIO ////funciona
 
 function hoy() {
     let numberOfTheDay = new Date().getDay();
     let days = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
     let hoy = days[numberOfTheDay - 1];
-    console.log(`Hoy es ${hoy}`);
+    return (`Hoy es ${hoy}`);
 }
+let fecha = hoy();
+console.log(fecha);
 
-hoy();
 
-
-// DOCEAVO EJERCICIO //
+// DOCEAVO EJERCICIO //// funciona
 
 function navidad() {
-    $days = console.getElementById("days"),
-        $hours = console.getElementById("hours"),
-        $minutes = console.getElementById("minutes"),
-        $seconds = console.getElementById("seconds"),
-        $finalMessage = console.getElementById(".final-sms");
+    let hoy = new Date();
 
-    const countdownDate = new Date(" DEC 25, 2022 00:00:00").getTime();
-    let interval = setInterval(function () {
-        const now = new Date().getTime();
+    let anioNavidad = hoy.getFullYear();
 
-        let distance = countdownDate - now;
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60));
-        let seconds = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000));
+    if (hoy.getMonth() == 11 &&
+        hoy.getDate() > 25) {
 
-        $days.console = days;
-        $hours.console = hours;
-        $minutes.console = minutes;
-        $seconds.console = ("0" + seconds).slice(-2);
+        anioNavidad = anioNavidad + 1;
+    }
 
-        if (distance < 0) {
-            clearInterval(interval);
-            $finalMessage.style.transform = "translateY(0)";
-        }
+    let diaNavidad =
+        new Date(anioNavidad, 11, 25);
 
-    }, 1000);
+    let dayMilliseconds =
+        1000 * 60 * 60 * 24;
 
-
+    let calcularDia = Math.ceil(
+        (diaNavidad.getTime() - hoy.getTime()) /
+        (dayMilliseconds)
+    );
+    return ("Faltan " + calcularDia +
+        " dias para navidad");
 }
+let fechaNavidad = navidad();
+console.log(fechaNavidad);
 
 
 
 
-// TRECEAVO EJERCICIO //
+// TRECEAVO EJERCICIO ////NO funciona
 
-function analiza(array) {
+/*function analiza(array) {
     let sum = 0;
-    let mayor = array[0];
+    let mayor = array[3];
     let menor = array[0];
     for (let i = 0; i < array.length; i++) {
         sum += array[i];
-        if (let(mayor < array[i])) {
+        if (mayor > array[i]) {
             (" el numero mayor es " + mayor);
         }
-        if (let(menor > array[0])) {
+        if (menor > array[0]) {
             (" el numero menor es " + menor);
         }
 
     }
-    return ("la suma de los" + "es igual a" + sum + "El numero mayor es" + mayor + "El numero menor es" + menor);
+    return ("la suma de los " + " numeros es " + sum + " El numero mayor es " + mayor + " El numero menor es " + menor);
 }
+let resultados = analiza([3,2,4,5,8,1]);
+console.log(resultados);
+*/
 
 
-// Ejercicio final//
+// Ejercicio final////funciona
 
 
 function prompExercise() {
