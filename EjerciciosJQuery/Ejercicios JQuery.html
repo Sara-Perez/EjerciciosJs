@@ -1,38 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts.js"></script>
-    <link rel="stylesheet" href="EjerciciosJQuery.css">
+    <link rel="stylesheet" href="EjerciciosJQuery.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    
-<div class = "circulos">
+  <body>
+    <div class="container">
 
-    <div class="circulo"></div>
-    <div class="circulo"></div>
-    <div class="circulo"></div>
-    <div class="circulo"></div>
-    <div class="circulo"></div>
-
-    
-
-</div>
-
-<button> Poner Rojo </button>
-
-<div id = "button2">
-    <button> Quitar Rojo </button>
-</div>
-
-
-
-</body>
-
+      <div id="ejercicio">
+        <h2>Ejercicio 1: Circulos cambian de color al clicar</h2>
+        <hr />
+        <div class="circulos">
+          <div id="circulo" class="circuloOrange"></div>
+          <div id="circulo" class="circuloOrange"></div>
+          <div id="circulo" class="circuloOrange"></div>
+          <div id="circulo" class="circuloOrange"></div>
+          <div id="circulo" class="circuloOrange"></div>
+        </div>
+  
+        <div class="flex-container">
+          <div id="putRed" style="order: 1">
+            <button id="buttonPutRed" class="btn btn-danger">Poner Rojo</button>
+          </div>
+  
+          <div id="quitRed" style="order: 3">
+            <button id="buttonQuitRed" class="btn btn-secondary">Quitar Rojo</button>
+          </div>
+        </div>
+      </div>
+  
+      <div id="ejercicio">
+        <h2>Ejercicio 2: Acceso a texto/contenido.</h2>
+        <hr />
+        <div class="flex-container-ex2">
+          <input id="textToCopy" type="text"  />
+          <button id="buttonCopy" class="btn btn-primary mt-2 mb-2">Copiar abajo</button>
+          <input id="copiedText" type="text" />
+        </div>
+      </div>
+      <div id="ejercicio">
+        <h2>Ejercicio 3: Acceso a texto/contenido con tabla.</h2>
+        <hr />
+        <div class="flex-container-ex2">
+          <input id="input_3" type="text" />
+          <div>
+            <button class="btn btn-info mb-2" id="button_reemp" >Reemplazar</button>
+            <button class="btn btn-success mb-2" id="button_add">Añadir</button>
+          </div>
+  
+          <table id="table_3">
+            <tr>
+              <td class="cell_text"></td>
+              <td class="cell_text"></td>
+              <td class="cell_text"></td>
+            </tr>
+            <tr>
+              <td class="cell_text"></td>
+              <td class="cell_text"></td>
+              <td class="cell_text"></td>
+            </tr>
+            <tr>
+              <td class="cell_text"></td>
+              <td class="cell_text"></td>
+              <td class="cell_text"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="ejercicio">
+        <h2>Ejercicio 4: Sumar y restar.</h2>
+        <hr />
+        <div class="flex-container-ex4">
+          <button id="buttonMinus" class="btn btn-dark">-</button> <input id="input_number" type="text" disabled />  <button id="buttonPlus" class="btn btn-dark">+</button> 
+  
+        </div>
+      </div>
+      <div id="ejercicio">
+        <h2>Ejercicio 5: Bootstrap.</h2>
+        <hr />
+        <div class="flex-container-ex5">
+          
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" id="remove"><<</a></li>
+              <li class="page-item"><a class="page-link">1</a></li>
+              <li class="page-item"><a class="page-link">2</a></li>
+              <li class="page-item"><a class="page-link">3</a></li>
+              <li class="page-item"><a class="page-link" id="add">>></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

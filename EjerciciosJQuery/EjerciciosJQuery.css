@@ -1,33 +1,98 @@
 
-
-.circulos{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-around;
+body{
+    background: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://movilforum.com/wp-content/uploads/2021/10/fondos-de-pantalla-4k-scaled.jpg);
+  }
+  
+  h2{
+    color: azure;
+  }
+  hr{
+     
+      margin-bottom: 2%;
+  }
+  table{
+    color: white;
+  }
+  .page-item{
+  
+    color: #68A5FF !important;
+  }
+  .page-item :hover{
+    cursor: pointer;
+  }
+  
+  
+  table, td {
+      border:2px solid white;
+    }
+  
+  #ejercicio{
+      margin-top: 10%;
+  }
+  
+  #circulo {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+  }
+  
+  .circulos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     font-size: 120%;
-    color: red;
-}
-
-.circulo{
-    width: 50px;
-    height: 50px;
-    background-color: orange;
-    border-radius: 100%;
-}
-.circulo2{
-    width: 50px;
-    height: 50px;
-    background-color: grey;
-    border-radius: 100%;
-}
-#button2{
-    display:flex;
-    justify-content:space-around;
- }
-
-.button{
-    display:flex;
-    
-    justify-content:space-around;
-}
+  }
+  
+  .circuloOrange {
+      background-color: orange;
+  }
+  
+  .circuloGrey {
+      background-color: grey;
+  }
+  .circuloRed {
+    background-color: red !important;
+  }
+  
+  
+  #quitRed {
+    margin-left: 3%;
+  }
+  
+  #button {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .flex-container {
+    margin-left: 5%;
+    margin-top: 5%;
+    display: flex;
+  }
+  
+  .flex-container-ex2{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  
+  #input_3{
+      margin: 10px 0;
+      width: 30vw;
+      padding: 10px;
+  }
+  #table_3{
+      width: 50vw;
+  }
+  
+  .cell_text{
+      text-align: center;
+  }
+  td{
+    height: 20px;
+  }
+  
